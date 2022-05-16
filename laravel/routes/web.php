@@ -47,3 +47,7 @@ function($nome , $idade ){
     $idade = 15;
     echo $idade > 18 ? "menor de idade" : "maior de idade";
 })->where("idade","[1-100]+");
+
+route::get('/{operation}/{v1}/{v2}','App\Http\Controllers\aritmetcontroller@cal')
+    ->wherein("operation",['soma','subtracao','multiplicacao','divisao'])
+    ->where(["v1" => "[0-9]+" , "v2" => "[0-9]+"]);
