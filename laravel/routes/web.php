@@ -32,7 +32,7 @@ function($ano , $titulo){
     echo "<h1>" . implode("", explode(".",$titulo)) ."</h1>";
 });
 
-roure::get('/politica/{dia}/{mes}/{ano}/{titulo?}',
+route::get('/politica/{dia}/{mes}/{ano}/{titulo?}',
 function($dia , $mes , $ano , $titulo){
     echo "<h1>" . implode("", explode(".",$titulo)) ."</h1>";
 });
