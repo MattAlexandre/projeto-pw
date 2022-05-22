@@ -32,7 +32,6 @@ class aritmetcontroller extends Controller
     }
 
  
-
     return view("cal" ,['v1' => $v1 , 'v2' => $v2, 'sing' => $sign, 'operation' => $operation , 'result' => $result]);
     echo "resultado " .$result;
     }
