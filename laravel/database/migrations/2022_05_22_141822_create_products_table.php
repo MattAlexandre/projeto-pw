@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('marca');
             $table->float('preco');
             $table->int('estoque');
-            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
