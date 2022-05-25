@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('pedido', function (Blueprint $table) {
             $table->id();
             $table->date('data_venda');
-            $table->int('quantidade_produtos');
+            $table->integer('quantidade_produtos');
             
             /*chaves estrangeiras */
             $table->unsignedBigInteger('id_client');

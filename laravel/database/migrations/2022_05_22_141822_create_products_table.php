@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('categoria');
             $table->string('marca');
             $table->float('preco');
-            $table->int('estoque');
+            $table->interger('estoque');
             $table->rememberToken();
             $table->timestamps();
         });

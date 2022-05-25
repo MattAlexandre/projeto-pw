@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('client', function (Blueprint $table) {
             $table->id();
-            $table->int('cep',8);
-            $table->int('rg',8);
-            $table->int('telefone',11);
+            $table->string('cep',8);
+            $table->string('rg',8);
+            $table->integer('telefone',11);
             /*chave estrangeira*/
 
             $table->unsignedBigInteger('user_id');
