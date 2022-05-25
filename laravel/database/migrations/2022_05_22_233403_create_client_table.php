@@ -21,7 +21,7 @@ return new class extends Migration
             /*chave estrangeira*/
 
             $table->unsignedBigInteger('user_id');
-            $table->foreign('id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
         });

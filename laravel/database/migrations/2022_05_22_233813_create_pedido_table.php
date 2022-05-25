@@ -19,11 +19,11 @@ return new class extends Migration
             $table->int('quantidade_produtos');
             
             /*chaves estrangeiras */
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('id')->references('id')->on('users');
+            $table->unsignedBigInteger('id_client');
+            $table->foreign('id_client')->references('id')->on('client');
 
-            $table->unsignedBigInteger('products_id');
-            $table->foreign('id')->references('id')->on('products');
+            $table->unsignedBigInteger('id_products');
+            $table->foreign('id_products')->references('id')->on('products');
 
 
 
