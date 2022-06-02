@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('telefone',11);
             $table->string('cnpj_empresa',14);
             $table->string('cep',8);
-            $table->timestamps();
+            $table->timestamps();   
         });
     }
 
