@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('assinaturas', function (Blueprint $table) {
+        Schema::create('subscriptions', function (Blueprint $table) {
             $table->id();
-            $table->date('data_assinatura');
-            $table->date('vencimento_assinatura');
+            $table->date('date_signature');
+            $table->date('date_subscription_expiration');
 
-
-            $table->unsignedBigInteger('id_empresa');
-            $table->foreign('id_empresa')->references('id')->on('empresa');
-
+             /*foreing key id company */
+             $table->unsignedBigInteger('company_id');
+             $table->foreign('company_id')->references('id')->on('company');
             $table->timestamps();
         });
     }
@@ -33,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('assinaturas');
+        Schema::dropIfExists('subscriptions');
     }
 };
