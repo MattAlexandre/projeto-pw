@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 route::get('/minha/rota',
 function(){
@@ -51,3 +49,19 @@ function($nome , $idade ){
 route::get('/{operation}/{v1}/{v2}','App\Http\Controllers\aritmetcontroller@cal')
     ->wherein("operation",['soma','subtracao','multiplicacao','divisao'])
     ->where(["v1" => "[0-9]+" , "v2" => "[0-9]+"]);
+Auth::routes();
+
+
+
+/* middleware = intermediador entre vossa beldade e o servidor */
+/* passando um array com o middleware, passando para o web.php */
+
+route::group(['middleware' => 'web'], function(){
+
+    Route::get('/', 'App\Http\Controllers\HomeController@index');
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+});

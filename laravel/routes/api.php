@@ -27,4 +27,4 @@ Route::post('/produto', 'App\Http\Controllers\ProductController@store');
 
 Route::delete('/produto/{id}', 'App\Http\Controllers\ProductController@destroy');
 
-Route::path('/produto/{id}', 'App\Http\Controllers\ProductController@update');
+Route::get('/produto/{id}', 'App\Http\Controllers\ProductController@update');
