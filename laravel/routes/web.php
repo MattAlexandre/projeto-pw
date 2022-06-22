@@ -69,3 +69,18 @@ route::group(['middleware' => 'web'], function(){
 /* sequencia de criação, rota , controller, view */
 /* rota usuario */  
 route::get('/users', 'App\Http\Controllers\usersController@index');
+
+/* rota novo usuario */
+route::get('/users/new', 'App\Http\Controllers\usersController@new');
+
+/* rota add usuario */
+route::post('/users/add', 'App\Http\Controllers\usersController@add');
+
+/* rota recebe os dados e manda para o form do update  */
+route::get('/users/{id}edit', 'App\Http\Controllers\usersController@edit');
+
+/* rota update */
+route::post('/users/update/{id}', 'App\Http\Controllers\usersController@update');
+
+/*rota delete  */
+route::delete('/users/delete', 'App\Http\Controllers\usersController@destroy');
