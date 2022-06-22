@@ -65,3 +65,7 @@ route::group(['middleware' => 'web'], function(){
 
 
 });
+
+/* sequencia de criação, rota , controller, view */
+/* rota usuario */  
+route::get('/users', 'App\Http\Controllers\usersController@index');

@@ -15,6 +15,8 @@
                     @endif
 
                     <h1> welcome </h1>
+                    <h2> <a href="{{ url('users') }}"> list </a> of users </h2>
+
                 </div>
             </div>
         </div>

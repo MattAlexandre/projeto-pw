@@ -15,6 +15,10 @@
                     @endif
 
                     <h1> List of Users</h1>
+
+                    @foreach(@users as $u)
+                        <p>{{ $u->$name }} | {{ $u->$email }}</p>
+                    @endforeach
                 </div>
             </div>
         </div>
