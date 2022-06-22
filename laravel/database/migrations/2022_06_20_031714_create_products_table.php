@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('description');
             $table->string('bar_code');
             $table->string('brand');
-            $table->blod('image');
             $table->timestamps();
         });
     }

@@ -23,13 +23,11 @@ class ProductController extends Controller
     public function store(Request $request) {
         $product = new Product();
 
-        $product->nome = $request->input('name');
-        $product->desc_produto = $request->input("discount");
-        $product->valor_produto = $request->input("price");
-        $product->barCode_produto = $request->input("barCode");
-        $product->validade_produto = $request->input("validate");
-        $product->marca = $request->input("brand");
-        $product->id_acesso = $request->input("access_id");
+        $product->name = $request->input('name');
+        $product->description = $request->input("discount");
+        $product->price = $request->input("price");
+        $product->bar_code = $request->input("barCode");
+        $product->brand = $request->input("brand");
 
         $product->save();
 
@@ -38,6 +36,15 @@ class ProductController extends Controller
 
     public function update() {
 
+        $product->name = $request->input('name');
+        $product->description = $request->input("discount");
+        $product->price = $request->input("price");
+        $product->bar_code = $request->input("barCode");
+        $product->brand = $request->input("brand");
+
+        $product->save();
+
+        return response("", 201);
     }
 
     public function destroy(int $id) {
