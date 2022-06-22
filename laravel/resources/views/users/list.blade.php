@@ -38,6 +38,9 @@
                                         <a href="{{ url('users/{{ $u->id }}/update') }}" class="btn btn-info">Update</a>
                                     </td>
                                     <td>
+                                        <form action="users/delete/{{ $u->id }}" method="post"></form>
+                                        @csrf 
+                                        @method('delete')
                                         <a href="{{ url('users/delete') }}" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>

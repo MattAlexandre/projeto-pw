@@ -83,4 +83,4 @@ route::get('/users/{id}edit', 'App\Http\Controllers\usersController@edit');
 route::post('/users/update/{id}', 'App\Http\Controllers\usersController@update');
 
 /*rota delete  */
-route::delete('/users/delete', 'App\Http\Controllers\usersController@destroy');
+route::delete('/users/delete/{id}', 'App\Http\Controllers\usersController@destroy');

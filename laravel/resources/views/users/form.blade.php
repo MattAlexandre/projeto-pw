@@ -55,7 +55,7 @@
                                 <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Register  </button>
+                            <button type="submit" class="btn btn-primary"> Register  </button>
                         </form>
                     
                 </div>
